@@ -8,23 +8,27 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin="0 10 0 10">
+        <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="48" OpenPaneLength="148" Margin="0 10 0 10">
             <SplitView.Pane>
                 <StackPanel Background="Gray">
-                    <Button x:Name="btnShowPane" FontFamily="Segoe MDL2 Assets" Content="&#xE00F;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                    <Button x:Name="btnShowPane" FontFamily="Segoe MDL2 Assets" Content="&#xE00F;" Width="50" Height="48" Background="Transparent" Click="HamburgerButton_Click"/>
 
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="first_menu"  FontFamily="Segoe MDL2 Assets" Content="&#xE80F;" Width="50" Height="50" Background="Transparent" Click="btnShowPane_click2"/>
-                        <TextBlock Text="Home" FontSize="18" Tapped="TextBlock_Tapped" RenderTransformOrigin="0.5,0.5" />
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="second_menu" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" Width="50" Height="50" Background="Transparent" Click="btnShowPane_click2"/>
-                        <TextBlock Text="History" VerticalAlignment="Center" FontSize="18"/>
-                    </StackPanel>
+                    <Button HorizontalAlignment="Stretch"  HorizontalContentAlignment="Left" Height="48" Background="Transparent" Click="CurrentButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Text="&#xE80F;" Margin="4,0,0,0"/>
+                            <TextBlock Text="Home" FontSize="18" Margin="18,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Height="48" Background="Transparent" Click="HisotoryButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="18" Text="&#xE71E;" Margin="4,0,0,0"/>
+                            <TextBlock Text="History" FontSize="18" Margin="18,0,0,0"/>
+                        </StackPanel>
+                    </Button>
 
                 </StackPanel>
             </SplitView.Pane>
-            <Grid HorizontalAlignment="Left" Height="620" VerticalAlignment="Top" Width="310"/>
         </SplitView>
     </Grid>
 </Page>
